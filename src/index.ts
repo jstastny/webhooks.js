@@ -40,7 +40,7 @@ class Webhooks<TTransformed> {
   ) => Promise<void>;
 
   constructor(options?: Options<TTransformed>) {
-    if (!options || !options.secret) {
+    if (!options?.secret) {
       throw new Error("[@octokit/webhooks] options.secret required");
     }
 
